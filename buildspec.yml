@@ -1,0 +1,20 @@
+version: 0.2  # AWS buildspec version
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18  # Use Node.js 18 (for React)
+    commands:
+      - npm install    # Install dependencies
+  pre_build:
+    commands:
+      - echo Running pre-build phase...
+  build:
+    commands:
+      - echo Build started on `date`
+      - npm run build  # Build the React app (creates /build folder)
+
+artifacts:
+  base-directory: build  # Where your output files live
+  files:
+    - '**/*'            # Upload all files inside /build to S3
