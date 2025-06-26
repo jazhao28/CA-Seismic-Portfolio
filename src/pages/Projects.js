@@ -10,7 +10,7 @@ const projects = [
     { name: "TicTacToe", category: "Game", link: "https://tictactoe-jade-xi.vercel.app/", description:"App to play tic tac toe", img: "/tttThumbnail.png"}
 ];
 
-const categories = ["All","Web", "Game"]
+const categories = ["All","Web", "Game", "AI"]
 export default function Projects(){
 
     const [catInput, setcatInput] = useState("All")
